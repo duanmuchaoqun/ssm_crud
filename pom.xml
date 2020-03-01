@@ -133,6 +133,13 @@
       <artifactId>mapper</artifactId>
       <version>4.1.5</version>
     </dependency>
+    <!--分页插件-->
+    <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>5.0.0</version>
+    </dependency>
 
 
   </dependencies>

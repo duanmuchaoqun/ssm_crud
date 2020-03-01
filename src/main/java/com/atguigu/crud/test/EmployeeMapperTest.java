@@ -2,6 +2,8 @@ package com.atguigu.crud.test;
 
 import com.atguigu.crud.bean.Employee;
 import com.atguigu.crud.service.EmployeeService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.session.RowBounds;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -134,6 +136,21 @@ public class EmployeeMapperTest {
     public void testDeleteByExample(){
 
 
+    }
+    @Test
+    public void testGetEmpList(){
+        PageHelper.startPage(1,10);
+        List<Employee> list= employeeService.getEmpList();
+        PageInfo<Employee> pageInfo = new PageInfo<>(list);
+        System.out.println("pageInfo = " + pageInfo);
+    }
+
+    @Test
+    public void getEmpList(){
+        PageHelper.startPage(1,10);
+        List<Employee> list= employeeService.getEmpList();
+        PageInfo<Employee> pageInfo = new PageInfo<>(list);
+        System.out.println("pageInfo = " + pageInfo);
     }
 
 }
